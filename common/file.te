@@ -13,7 +13,8 @@ type cnd_data_file, file_type;
 
 # Define dpmd data file type
 type dpmd_socket, file_type;
-type dpmd_data_file, data_file_type;
+type dpmwrapper_socket, file_type;
+type dpmd_data_file, file_type, data_file_type;
 
 #Define the timeout for platform specific transports
 type sysfs_hsic_modem_wait, sysfs_type, fs_type;
@@ -26,7 +27,7 @@ type sysrq_trigger_proc, fs_type, mlstrustedobject;
 type persist_file, file_type;
 type persist_data_file, file_type;
 type persist_drm_file, file_type;
-type data_drm_file, file_type;
+type data_qsee_file, file_type;
 
 type diag_data_file, file_type, data_file_type;
 
@@ -47,6 +48,7 @@ type sysfs_msmuart_file, sysfs_type, fs_type;
 # Storage RFS file types
 type rfs_data_file, file_type;
 type rfs_system_file, file_type;
+type rfs_shared_hlos_file, file_type;
 
 #mm-pp-daemon file type for sysfs access
 type sysfs_leds, fs_type, sysfs_type;
@@ -93,10 +95,20 @@ type sysfs_socinfo, fs_type, sysfs_type;
 type sysfs_usb_uicc, sysfs_type, fs_type;
 
 type qlogd_socket, file_type;
-
+type qlogd_data_file, file_type;
 #Define the files written during the operation of mm-pp-daemon
 type display_config, file_type, data_file_type;
 
 # IPA file types
 type ipacm_socket, file_type;
 type ipacm_data_file, file_type;
+
+#Define the files written during the operation of mmi
+type mmi_data_file, file_type, data_file_type;
+
+#needed by vold
+type  proc_dirty_ratio, fs_type;
+
+# hbtp config file
+type hbtp_cfg_file, file_type;
+type hbtp_log_file, file_type;

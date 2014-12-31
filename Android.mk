@@ -60,6 +60,7 @@ BOARD_SEPOLICY_UNION := \
        mcStarter.te \
        keystore.te \
        ims.te \
+       imscm.te \
        healthd.te \
        charger_monitor.te \
        surfaceflinger.te \
@@ -84,7 +85,14 @@ BOARD_SEPOLICY_UNION := \
        seapp_contexts \
        logd.te \
        installd.te \
-       wcnss_service.te
+       wcnss_service.te \
+       mmi.te \
+       dhcp.te \
+       wfd_app.te \
+       mediaserver_test.te \
+       hbtp.te \
+       kernel.te \
+       vold.te
 
 # Compile sensor pilicy only for SSC targets
 SSC_TARGET_LIST := apq8084
@@ -97,4 +105,5 @@ SSC_TARGET_LIST += msm8994
 BOARD_SEPOLICY_UNION += sensors.te
 BOARD_SEPOLICY_UNION += sensors_test.te
 #endif
+
 endif
