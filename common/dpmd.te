@@ -36,3 +36,12 @@ allow dpmd kernel:system module_request;
 #appdomain
 allow dpmd appdomain:fd use;
 allow dpmd appdomain:tcp_socket { read write getopt getattr };
+
+#permission to unlink dpmwrapper socket
+allow dpmd socket_device:dir remove_name;
+
+#permission to communicate with cnd_socket for installing iptable rules
+unix_socket_connect(dpmd, cnd, cnd);
+
+#diag
+diag_rw(dpmd);

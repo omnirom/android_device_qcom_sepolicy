@@ -85,13 +85,15 @@ BOARD_SEPOLICY_UNION += \
        logd.te \
        installd.te \
        wcnss_service.te \
+       recovery.te \
        mmi.te \
        dhcp.te \
-       wfd_app.te \
        mediaserver_test.te \
        hbtp.te \
        kernel.te \
-       vold.te
+       vold.te \
+       wfdservice.te \
+       usf.te
 
 -include device/qcom/sepolicy/$(TARGET_BOARD_PLATFORM)/Android.mk
 
