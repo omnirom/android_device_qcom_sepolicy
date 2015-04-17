@@ -8,7 +8,7 @@ init_daemon_domain(sensors)
 type_transition sensors system_data_file:{ dir file } sensors_data_file;
 
 # Change own perms to (nobody,nobody)
-allow sensors self:capability { setuid setgid };
+allow sensors self:capability { setuid setgid sys_nice };
 # Chown /data/misc/sensors/debug/ to nobody
 allow sensors self:capability chown;
 dontaudit sensors self:capability fsetid;
