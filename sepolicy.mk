@@ -93,7 +93,8 @@ BOARD_SEPOLICY_UNION += \
        kernel.te \
        vold.te \
        wfdservice.te \
-       usf.te
+       usf.te \
+       platform_app.te
 
 -include device/qcom/sepolicy/$(TARGET_BOARD_PLATFORM)/Android.mk
 
